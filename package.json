@@ -1,0 +1,19 @@
+{
+  "name": "ioredis-rejson-test",
+  "version": "1.0.3",
+  "description": "Interface to RedisJSON on top of ioredis",
+  "main": "lib/index.js",
+  "types": "lib",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "author": "schulzf",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "@types/ioredis": "^4.27.6",
+    "ioredis": "^4.27.10"
+  }
+}
