@@ -1,7 +1,7 @@
 {
   "name": "ioredis-rejson-test",
-  "version": "1.0.3",
-  "description": "Interface to RedisJSON on top of ioredis",
+  "version": "1.0.4",
+  "description": "Interface to RedisJSON on top of IORedis",
   "main": "lib/index.js",
   "types": "lib",
   "scripts": {
