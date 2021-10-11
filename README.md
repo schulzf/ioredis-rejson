@@ -1,8 +1,6 @@
 # IORedis ReJSON
 
-<pre>
-
-</pre>
+&nbsp;
 
 This module adds a layer of commands to interact with [Redis ReJSON module](https://github.com/RedisJSON/RedisJSON) on top of IORedis.
 
@@ -10,23 +8,17 @@ For IORedis commands please refer to [IORedis repository](https://github.com/lui
 
 This module uses ioredis and @types/ioredis as a dependencies
 
-<pre>
-
-</pre>
+&nbsp;
 
 **Known limitations:** `multi` / `pipeline` is not supported with this module.
 
 **Disclaimer:** this module is not battle tested, if you find any issue with it please open an issue or a pull request.
 
-<pre>
-
-</pre>
+&nbsp;
 
 ## Quick Start
 
-<pre>
-
-</pre>
+&nbsp;
 
 1. Install module
 
@@ -40,9 +32,7 @@ This module uses ioredis and @types/ioredis as a dependencies
    npm install --save ioredis-rejson
    ```
 
-   <pre>
-
-</pre>
+   &nbsp;
 
 2. Create a client instance
 
@@ -55,9 +45,7 @@ const redis = new Redis({
 });
 ```
 
-<pre>
-
-</pre>
+&nbsp;
 
 3. Interact with redis using the just created client instance
 
@@ -82,23 +70,17 @@ const main = async () => {
 main()
 ```
 
-<pre>
-
-</pre>
+&nbsp;
 
 NOTE: ioredis-rejson serializes and deserializes data where needed to facilitate interaction, you can pass objects, arrays, strings, etc and it will be serialized as json where it needs to be, same for get requests, the returned data will be deserialized.
 
-<pre>
-
-</pre>
+&nbsp;
 
 ## Commands
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_SET
 
@@ -114,15 +96,11 @@ String `OK` if executed correctly or `null `if the specified `NX` `XX` condition
 
 O(M+N), where M is the size of the original value (if it exists) and N is the size of the new value.
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_GET
 
@@ -138,15 +116,11 @@ Returns the parsed json data from `path` or `null`
 
 O(N), where N is the size of the value.
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_MGET
 
@@ -178,15 +152,11 @@ await redis.json_del('KEY', '*optional* PATH');
 
 O(N), where N is the size of the deleted value.
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_NUMINCRBY
 
@@ -202,15 +172,11 @@ Float, specifically the new value
 
 O(1).
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_NUMMULTBY
 
@@ -226,15 +192,11 @@ Float, specifically the new value
 
 O(1).
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_STRAPPEND
 
@@ -266,15 +228,11 @@ await redis.json_strlen('KEY', '*optional* PATH');
 
 O(1).
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_ARRAPEND
 
@@ -290,15 +248,11 @@ await redis.json_arrapend('KEY', 'PATH', 'DATA | [DATA]');
 
 O(1).
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_ARRINDEX
 
@@ -320,15 +274,11 @@ await redis.json_arrindex(
 
 O(N), where N is the array's size.
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_ARRINSERT
 
@@ -344,15 +294,11 @@ await redis.json_arrinsert('KEY', 'PATH', 'INDEX', 'DATA | [DATA]');
 
 O(N), where N is the array's size.
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_ARRLEN
 
@@ -368,15 +314,11 @@ await redis.json_arrlen('KEY', '*optional* PATH');
 
 O(1).
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_ARRPOP
 
@@ -392,15 +334,11 @@ The deserialized popped value
 
 O(N), where N is the array's size for `index` other than the last element, O(1) otherwise.
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_ARRTRIM
 
@@ -416,15 +354,11 @@ await redis.json_arrtrim('KEY', 'PATH', 'START', 'STOP');
 
 O(N), where N is the array's size.
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_OBJKEYS
 
@@ -440,15 +374,11 @@ await redis.json_objkeys('KEY', '*optional* PATH');
 
 O(N), where N is the number of keys in the object.
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_OBJLEN
 
@@ -464,15 +394,11 @@ await redis.json_objlen('KEY', '*optional* PATH');
 
 O(1).
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_TYPE
 
@@ -488,15 +414,11 @@ await redis.json_type('KEY', '*optional* PATH');
 
 O(1).
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_FORGET
 
@@ -514,15 +436,11 @@ await redis.json_forget('KEY', '*optional* PATH');
 
 O(N), where N is the size of the deleted value.
 
-<pre>
-
-</pre>
+&nbsp;
 
 ---
 
-<pre>
-
-</pre>
+&nbsp;
 
 ### JSON_RESP
 
