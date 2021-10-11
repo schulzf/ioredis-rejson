@@ -1,7 +1,5 @@
 # IORedis ReJSON
 
-&nbsp;
-
 This module adds a layer of commands to interact with [Redis ReJSON module](https://github.com/RedisJSON/RedisJSON) on top of IORedis.
 
 For IORedis commands please refer to [IORedis repository](https://github.com/luin/ioredis).
@@ -78,10 +76,6 @@ NOTE: ioredis-rejson serializes and deserializes data where needed to facilitate
 
 ## Commands
 
----
-
-&nbsp;
-
 ### JSON_SET
 
 ```js
@@ -99,8 +93,6 @@ O(M+N), where M is the size of the original value (if it exists) and N is the si
 &nbsp;
 
 ---
-
-&nbsp;
 
 ### JSON_GET
 
@@ -120,8 +112,6 @@ O(N), where N is the size of the value.
 
 ---
 
-&nbsp;
-
 ### JSON_MGET
 
 ```js
@@ -135,6 +125,8 @@ Returns the parsed json data from `path` or `null`
 ##### Time complexity
 
 O(M\*N), where M is the number of keys and N is the size of the value.
+
+&nbsp;
 
 ---
 
@@ -156,8 +148,6 @@ O(N), where N is the size of the deleted value.
 
 ---
 
-&nbsp;
-
 ### JSON_NUMINCRBY
 
 ```js
@@ -175,8 +165,6 @@ O(1).
 &nbsp;
 
 ---
-
-&nbsp;
 
 ### JSON_NUMMULTBY
 
@@ -196,8 +184,6 @@ O(1).
 
 ---
 
-&nbsp;
-
 ### JSON_STRAPPEND
 
 ```js
@@ -211,6 +197,8 @@ await redis.json_strappend('KEY', '*optional* PATH', 'NUMBER');
 ##### Time complexity
 
 O(N), where N is the new string's length.
+
+&nbsp;
 
 ---
 
@@ -232,8 +220,6 @@ O(1).
 
 ---
 
-&nbsp;
-
 ### JSON_ARRAPEND
 
 ```js
@@ -251,8 +237,6 @@ O(1).
 &nbsp;
 
 ---
-
-&nbsp;
 
 ### JSON_ARRINDEX
 
@@ -278,8 +262,6 @@ O(N), where N is the array's size.
 
 ---
 
-&nbsp;
-
 ### JSON_ARRINSERT
 
 ```js
@@ -297,8 +279,6 @@ O(N), where N is the array's size.
 &nbsp;
 
 ---
-
-&nbsp;
 
 ### JSON_ARRLEN
 
@@ -318,8 +298,6 @@ O(1).
 
 ---
 
-&nbsp;
-
 ### JSON_ARRPOP
 
 ```js
@@ -337,8 +315,6 @@ O(N), where N is the array's size for `index` other than the last element, O(1) 
 &nbsp;
 
 ---
-
-&nbsp;
 
 ### JSON_ARRTRIM
 
@@ -358,8 +334,6 @@ O(N), where N is the array's size.
 
 ---
 
-&nbsp;
-
 ### JSON_OBJKEYS
 
 ```js
@@ -377,8 +351,6 @@ O(N), where N is the number of keys in the object.
 &nbsp;
 
 ---
-
-&nbsp;
 
 ### JSON_OBJLEN
 
@@ -398,8 +370,6 @@ O(1).
 
 ---
 
-&nbsp;
-
 ### JSON_TYPE
 
 ```js
@@ -417,8 +387,6 @@ O(1).
 &nbsp;
 
 ---
-
-&nbsp;
 
 ### JSON_FORGET
 
@@ -439,8 +407,6 @@ O(N), where N is the size of the deleted value.
 &nbsp;
 
 ---
-
-&nbsp;
 
 ### JSON_RESP
 
