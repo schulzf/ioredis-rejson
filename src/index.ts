@@ -1,12 +1,10 @@
 import Redis from 'ioredis';
 
-class RedisWithCall extends Redis {
+export default class RedisReJSON extends Redis {
   call: (command: string, args: string | string[] | any[]) => Promise<any>;
-}
 
-export default class RedisReJSON extends RedisWithCall {
   constructor(options: Redis.RedisOptions) {
-    super(options as Redis.RedisOptions);
+    super(options);
   }
 
   public json_get = async (

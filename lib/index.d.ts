@@ -1,8 +1,6 @@
 import Redis from 'ioredis';
-declare class RedisWithCall extends Redis {
+export default class RedisReJSON extends Redis {
     call: (command: string, args: string | string[] | any[]) => Promise<any>;
-}
-export default class RedisReJSON extends RedisWithCall {
     constructor(options: Redis.RedisOptions);
     json_get: (key: string, path?: string | string[] | undefined) => Promise<Object | null>;
     json_del: (key: string, path?: string | undefined) => Promise<number>;
@@ -24,5 +22,4 @@ export default class RedisReJSON extends RedisWithCall {
     json_objlen: (key: string, path?: string | undefined) => Promise<number | null>;
     json_resp: (key: string, path?: string | undefined) => Promise<object | null>;
 }
-export {};
 //# sourceMappingURL=index.d.ts.map
