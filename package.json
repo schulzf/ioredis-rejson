@@ -4,7 +4,6 @@
   "description": "Interface to RedisJSON on top of IORedis",
   "main": "lib/index.js",
   "types": "lib",
-  "type": "module",
   "scripts": {
     "build": "tsc -p ."
   },
