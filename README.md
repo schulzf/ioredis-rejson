@@ -22,12 +22,14 @@ This module uses ioredis and @types/ioredis as a dependencies
 
    ```
    yarn add ioredis-rejson
+   yarn add -D @types/ioredis
    ```
 
    or
 
    ```
    npm install --save ioredis-rejson
+   npm install --save-dev @types/ioredis
    ```
 
    &nbsp;
